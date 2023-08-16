@@ -72,10 +72,9 @@ function markMilestone(checkbox, id) {
     doneList.removeChild(item);
     milestoneList.appendChild(item);
 
-    const modules = document.querySelectorAll('.milestones .milestone');
-    console.log(modules);
+    const milestoneComponents = document.querySelectorAll('.milestones .milestone');
     let listItem = [];
-    modules.forEach(module => listItem.push(module));
+    milestoneComponents.forEach(milestoneComponent => listItem.push(milestoneComponent));
     listItem.sort((a, b) => a.id - b.id);
     listItem.forEach(item => milestoneList.appendChild(item));
   }
